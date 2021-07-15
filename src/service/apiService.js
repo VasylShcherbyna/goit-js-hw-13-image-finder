@@ -1,12 +1,11 @@
-const baseUrl =
-  'https://pixabay.com/api/?image_type=photo&orientation=horizontal';
+const baseUrl = "https://pixabay.com/api/";
 
 export default {
   page: 1,
-  query: '',
+  query: "",
   perPage: 12,
-  key: '14890929-23ffdef91aab059ee79f68fac',
-  fetchImages: async function() {
+  key: "22516391-185885990a61958acb3a57b33",
+  fetchImages: async function () {
     const requestParams = `&q=${this.query}&page=${this.page}&per_page=${this.perPage}&key=${this.key}`;
     try {
       let response = await fetch(baseUrl + requestParams);
