@@ -1,7 +1,7 @@
 :root {
-    --bcg-color: rgba(169, 115, 219, 0.459);
-    --text-and-border-color: rgb(117, 40, 189);
-    --main-font: 'Yomogi', cursive;
+    --bcg-color: rgba(9, 70, 12, 0.753);
+    --text-and-border-color: rgb(22, 15, 94);
+    --main-font: red, cursive;
 }
 
 body {
@@ -27,8 +27,8 @@ main {
 
 .header {
     font-family: var(--main-font);
-    color: var(--text-and-border-color);
-    font-size: 34px;
+    color: black;
+    font-size: 54px;
     font-weight: 900;
     font-style: italic;
     text-align: center;
@@ -106,35 +106,17 @@ main {
 .material-icons {
     margin-right: 10px;
     color: var(--text-and-border-color);
-
-    &.up {
-        position: fixed;
-        right: 15px;
-        bottom: 15px;
-    }
-
-    &.down {
-        position: fixed;
-        left: 15px;
-        top: 15px;
-    }
-
-    &.up, &.down {
-        border-radius: 15px;
-        background-color: var(--bcg-color);
-        border: var(--text-and-border-color) solid 1px;
-    }
 }
 
 .button {
     margin: 0 auto;
     display: block;
-    border-radius: 15px;
+    border-radius: 10px;
     border: var(--text-and-border-color) solid 1px;
     background-color: var(--bcg-color);
     color: var(--text-and-border-color);
-    width: 200px;
-    height: 50px;
+    width: 150px;
+    height: 40px;
     font-family: var(--main-font);
     font-size: 25px;
     font-style: italic;

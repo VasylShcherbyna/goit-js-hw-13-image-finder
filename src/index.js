@@ -1,27 +1,22 @@
 import './sass/main.scss';
 import ImagesApiService from './js/apiService.js';
 import imagesListTpl from './templates/imagesListTpl.hbs';
-
 import { error, notice } from "@pnotify/core";
 import "@pnotify/core/dist/PNotify.css";
 import "@pnotify/core/dist/BrightTheme.css";
 
 
 const refs = {
-    form: document.querySelector('#search-form'),
-    loadMoreBtn: document.querySelector('[data-action="load-more"]'),
-    gallery: document.querySelector('.gallery'),
-    loader: document.querySelector('.loader-js'),
-    upArrow: document.querySelector('.up-js'),
-    downArrow: document.querySelector('.down-js'),
+  gallery: document.querySelector('.gallery'),
+  loader: document.querySelector('.loader-js'),
+  form: document.querySelector('#search-form'),
+  loadMoreBtn: document.querySelector('[data-action="load-more"]'),
 };
 
 const imagesApiService = new ImagesApiService(); 
 
 refs.form.addEventListener('submit', onSearch);
 refs.loadMoreBtn.addEventListener('click', onLoadMore);
-refs.upArrow.addEventListener('click', onUpArrow);
-refs.downArrow.addEventListener('click', onDownArrow);
 
 async function onSearch (evt) {
     evt.preventDefault();
@@ -32,9 +27,9 @@ async function onSearch (evt) {
 
         if(imagesApiService.query === '') {
             return error({
-                text: "Sorry, but for start of search you have to enter the word",
-                delay: 3000,
-                mouseReset: true,
+              text: 'Try entering something else',
+              delay: 3000,
+              mouseReset: true,
             });
         };
 
@@ -50,9 +45,9 @@ async function onSearch (evt) {
         refs.loader.classList.add('is-hidden');
     } catch {
         return error({
-            text: "Sorry, but something went wrong",
-            delay: 3000,
-            mouseReset: true,
+          text: 'Error sorry',
+          delay: 3000,
+          mouseReset: true,
         });
     };  
 };
@@ -74,35 +69,23 @@ function clearGalleryContainer () {
     refs.gallery.innerHTML = '';
 };
 
+function scrollAfterLoad() {
+  refs.loadMoreBtn.scrollIntoView({
+    behavior: 'smooth',
+    block: 'end',
+  });
+}
+
 function checkImagesPresence (array) {
     if (array.length === 0) {
         return notice({
-            text: "Sorry, there are not pictures by your search, try to enter something else",
-            delay: 3000,
+          text: 'Try entering something else',
+          delay: 3000,
         });
     }
 };
 
-function scrollAfterLoad () {
-    refs.loadMoreBtn.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
-    });
-}
 
-function onDownArrow (e) {
-    e.preventDefault();
-    refs.loadMoreBtn.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
-    });
-}
 
-function onUpArrow (e) {
-    e.preventDefault();
-    refs.form.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-    });
-}
+
 
