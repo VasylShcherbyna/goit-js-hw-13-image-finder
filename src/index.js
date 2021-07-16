@@ -82,3 +82,4 @@ function checkImagesPresence(array) {
     });
   }
 }
+
