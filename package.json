@@ -1,32 +1,31 @@
 {
-  "name": "parcel-project-template",
-  "version": "1.1.0",
+  "name": "goit-js-hw-12-countries",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://yaroslava-yemets.github.io/goit-js-hw-13-image-finder",
   "scripts": {
-    "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-13-image-finder/"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/*.html --public-url /goit-js-hw-12-countries/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/VasylShcherbyna/goit-js-hw-12-countries.git"
   },
-  "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/VasylShcherbyna/goit-js-hw-12-countries/issues"
   },
+  "homepage": "https://vasylshcherbyna.github.io/goit-js-hw-12-countries/",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
-    "parcel-plugin-handlebars-precompile": "^1.0.2",
-    "parcel-plugin-nuke-dist": "^1.0.1",
-    "pnotify": "^5.2.0",
-    "posthtml-include": "^1.6.2",
-    "sass": "^1.32.8"
+    "parcel-plugin-handlebars-precompile": "^1.0.2"
   },
   "dependencies": {
-    "lodash.debounce": "^4.0.8"
+    "@pnotify/core": "^5.2.0",
+    "gh-pages": "^3.2.0",
+    "parcel-plugin-nuke-dist": "^1.0.1"
   }
 }
