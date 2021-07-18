@@ -1,5 +1,5 @@
 {
-  "name": "goit-js-hw-12-countries",
+  "name": "goit-js-hw-13-image-finder",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VasylShcherbyna/goit-js-hw-12-countries.git"
+    "url": "git+https://github.com/VasylShcherbyna/goit-js-hw-13-image-finder.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VasylShcherbyna/goit-js-hw-12-countries/issues"
+    "url": "https://github.com/VasylShcherbyna/goit-js-hw-13-image-finder/issues"
   },
-  "homepage": "https://vasylshcherbyna.github.io/goit-js-hw-12-countries/",
+  "homepage": "https://vasylshcherbyna.github.io/goit-js-hw-13-image-finder/",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
